@@ -14,6 +14,7 @@
 		BC92BEE91EE72D2D00F06EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC92BEE71EE72D2D00F06EDA /* LaunchScreen.storyboard */; };
 		BC92BEF91EE72F6100F06EDA /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC92BEF71EE72F6100F06EDA /* SpotifyAudioPlayback.framework */; };
 		BC92BEFA1EE72F6100F06EDA /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC92BEF81EE72F6100F06EDA /* SpotifyAuthentication.framework */; };
+		BCCA29411EE7362300569A42 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA29401EE7362300569A42 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BC92BEEA1EE72D2D00F06EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC92BEF71EE72F6100F06EDA /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		BC92BEF81EE72F6100F06EDA /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		BCCA29401EE7362300569A42 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +63,10 @@
 		BC92BEDD1EE72D2D00F06EDA /* TheTuneSquad */ = {
 			isa = PBXGroup;
 			children = (
-				BC92BEDE1EE72D2D00F06EDA /* AppDelegate.swift */,
-				BC92BEE01EE72D2D00F06EDA /* ViewController.swift */,
-				BC92BEE21EE72D2D00F06EDA /* Main.storyboard */,
-				BC92BEE51EE72D2D00F06EDA /* Assets.xcassets */,
-				BC92BEE71EE72D2D00F06EDA /* LaunchScreen.storyboard */,
-				BC92BEEA1EE72D2D00F06EDA /* Info.plist */,
+				BCCA29421EE7362C00569A42 /* model */,
+				BCCA29431EE7363300569A42 /* view */,
+				BCCA29441EE7363C00569A42 /* controller */,
+				BCCA29451EE7364B00569A42 /* supporting */,
 			);
 			path = TheTuneSquad;
 			sourceTree = "<group>";
@@ -78,6 +78,41 @@
 				BC92BEF81EE72F6100F06EDA /* SpotifyAuthentication.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCCA29421EE7362C00569A42 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BCCA29401EE7362300569A42 /* API.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		BCCA29431EE7363300569A42 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BC92BEE21EE72D2D00F06EDA /* Main.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		BCCA29441EE7363C00569A42 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC92BEE01EE72D2D00F06EDA /* ViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		BCCA29451EE7364B00569A42 /* supporting */ = {
+			isa = PBXGroup;
+			children = (
+				BC92BEDE1EE72D2D00F06EDA /* AppDelegate.swift */,
+				BC92BEE51EE72D2D00F06EDA /* Assets.xcassets */,
+				BC92BEE71EE72D2D00F06EDA /* LaunchScreen.storyboard */,
+				BC92BEEA1EE72D2D00F06EDA /* Info.plist */,
+			);
+			name = supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC92BEE11EE72D2D00F06EDA /* ViewController.swift in Sources */,
+				BCCA29411EE7362300569A42 /* API.swift in Sources */,
 				BC92BEDF1EE72D2D00F06EDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +364,7 @@
 				BC92BEEF1EE72D2D00F06EDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
