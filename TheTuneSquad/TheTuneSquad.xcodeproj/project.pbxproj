@@ -12,8 +12,8 @@
 		BC92BEE41EE72D2D00F06EDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC92BEE21EE72D2D00F06EDA /* Main.storyboard */; };
 		BC92BEE61EE72D2D00F06EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC92BEE51EE72D2D00F06EDA /* Assets.xcassets */; };
 		BC92BEE91EE72D2D00F06EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC92BEE71EE72D2D00F06EDA /* LaunchScreen.storyboard */; };
-		BC92BEF51EE72EA600F06EDA /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC92BEF31EE72EA600F06EDA /* SpotifyAudioPlayback.framework */; };
-		BC92BEF61EE72EA600F06EDA /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC92BEF41EE72EA600F06EDA /* SpotifyAuthentication.framework */; };
+		BC92BEF91EE72F6100F06EDA /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC92BEF71EE72F6100F06EDA /* SpotifyAudioPlayback.framework */; };
+		BC92BEFA1EE72F6100F06EDA /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC92BEF81EE72F6100F06EDA /* SpotifyAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		BC92BEE51EE72D2D00F06EDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC92BEE81EE72D2D00F06EDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC92BEEA1EE72D2D00F06EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC92BEF31EE72EA600F06EDA /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = "../../../../Downloads/ios-sdk-beta-25/SpotifyAudioPlayback.framework"; sourceTree = "<group>"; };
-		BC92BEF41EE72EA600F06EDA /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = "../../../../Downloads/ios-sdk-beta-25/SpotifyAuthentication.framework"; sourceTree = "<group>"; };
+		BC92BEF71EE72F6100F06EDA /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		BC92BEF81EE72F6100F06EDA /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,8 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC92BEF51EE72EA600F06EDA /* SpotifyAudioPlayback.framework in Frameworks */,
-				BC92BEF61EE72EA600F06EDA /* SpotifyAuthentication.framework in Frameworks */,
+				BC92BEF91EE72F6100F06EDA /* SpotifyAudioPlayback.framework in Frameworks */,
+				BC92BEFA1EE72F6100F06EDA /* SpotifyAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,8 +74,8 @@
 		BC92BEF01EE72E6D00F06EDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BC92BEF31EE72EA600F06EDA /* SpotifyAudioPlayback.framework */,
-				BC92BEF41EE72EA600F06EDA /* SpotifyAuthentication.framework */,
+				BC92BEF71EE72F6100F06EDA /* SpotifyAudioPlayback.framework */,
+				BC92BEF81EE72F6100F06EDA /* SpotifyAuthentication.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,6 +280,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AYB4L38F4S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TheTuneSquad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.christinalee.TheTuneSquad;
@@ -293,6 +297,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AYB4L38F4S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TheTuneSquad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.christinalee.TheTuneSquad;
