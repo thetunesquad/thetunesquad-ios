@@ -9,6 +9,10 @@
 import UIKit
 
 class PlaylistTableViewCell: UITableViewCell {
+    @IBOutlet weak var albumArt: UIImageView!
+    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var albumLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
