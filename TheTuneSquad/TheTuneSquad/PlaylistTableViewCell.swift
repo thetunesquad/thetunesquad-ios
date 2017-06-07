@@ -14,15 +14,17 @@ class PlaylistTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var albumLabel: UILabel!
 
+    var track: Track! {
+        didSet {
+            self.artistLabel.text = track.artist
+            self.titleLabel.text = track.title
+            self.albumLabel.text = track.album
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @IBAction func playButtonPressed(_ sender: UIButton) {

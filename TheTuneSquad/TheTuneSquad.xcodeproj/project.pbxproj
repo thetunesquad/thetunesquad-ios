@@ -14,6 +14,7 @@
 		BC589B0D1EE8974A006B3F7F /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC589B0C1EE8974A006B3F7F /* Track.swift */; };
 		BC589B101EE89DF2006B3F7F /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC589B0E1EE89DF2006B3F7F /* PlaylistTableViewCell.swift */; };
 		BC589B111EE89DF2006B3F7F /* PlaylistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC589B0F1EE89DF2006B3F7F /* PlaylistTableViewCell.xib */; };
+		BC589B131EE8A742006B3F7F /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC589B121EE8A742006B3F7F /* UIExtensions.swift */; };
 		BC92BEDF1EE72D2D00F06EDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92BEDE1EE72D2D00F06EDA /* AppDelegate.swift */; };
 		BC92BEE11EE72D2D00F06EDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92BEE01EE72D2D00F06EDA /* ViewController.swift */; };
 		BC92BEE41EE72D2D00F06EDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC92BEE21EE72D2D00F06EDA /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		BC589B0C1EE8974A006B3F7F /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		BC589B0E1EE89DF2006B3F7F /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
 		BC589B0F1EE89DF2006B3F7F /* PlaylistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistTableViewCell.xib; sourceTree = "<group>"; };
+		BC589B121EE8A742006B3F7F /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		BC92BEDB1EE72D2D00F06EDA /* TheTuneSquad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheTuneSquad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC92BEDE1EE72D2D00F06EDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC92BEE01EE72D2D00F06EDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		BCCA29421EE7362C00569A42 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				BC589B121EE8A742006B3F7F /* UIExtensions.swift */,
 				BC589B0C1EE8974A006B3F7F /* Track.swift */,
 				BCCA29401EE7362300569A42 /* API.swift */,
 				BC589B081EE88ECF006B3F7F /* Artist.swift */,
@@ -213,6 +216,7 @@
 				BC589B031EE87CB8006B3F7F /* LoginViewController.swift in Sources */,
 				BC589B051EE87CC4006B3F7F /* InputViewController.swift in Sources */,
 				BC589B071EE87CD4006B3F7F /* PlaylistViewController.swift in Sources */,
+				BC589B131EE8A742006B3F7F /* UIExtensions.swift in Sources */,
 				BC589B0D1EE8974A006B3F7F /* Track.swift in Sources */,
 				BC92BEE11EE72D2D00F06EDA /* ViewController.swift in Sources */,
 				BCCA29411EE7362300569A42 /* API.swift in Sources */,
