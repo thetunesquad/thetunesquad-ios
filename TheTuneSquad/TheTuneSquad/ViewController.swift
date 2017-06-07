@@ -29,7 +29,10 @@ class ViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         let options = [UIApplicationOpenURLOptionUniversalLinksOnly : false]
-        UIApplication.shared.open(loginUrl!, options: options, completionHandler: nil)
+//        UIApplication.shared.open(loginUrl!, options: options, completionHandler: nil)
+        UIApplication.shared.open(loginUrl!, options: options) { (success) in
+            print("\(success)")
+        }
     }
     
 
