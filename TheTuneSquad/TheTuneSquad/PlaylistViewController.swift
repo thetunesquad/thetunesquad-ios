@@ -10,6 +10,8 @@ import UIKit
 
 class PlaylistViewController: UIViewController {
 
+    @IBOutlet weak var playlistTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
