@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r4a-wf-MT9">
-                                <rect key="frame" x="-0.5" y="83.5" width="375" height="500"/>
+                                <rect key="frame" x="-0.5" y="66.5" width="375" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="N3w-SK-Pbc">
@@ -125,7 +125,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="r4a-wf-MT9" firstAttribute="centerY" secondItem="cyX-RM-nQg" secondAttribute="centerY" id="BPZ-hb-S3a"/>
-                            <constraint firstItem="r4a-wf-MT9" firstAttribute="height" secondItem="cyX-RM-nQg" secondAttribute="height" multiplier="0.75" id="CHd-jf-QEH"/>
+                            <constraint firstItem="r4a-wf-MT9" firstAttribute="height" secondItem="cyX-RM-nQg" secondAttribute="height" multiplier="0.8" id="CHd-jf-QEH"/>
                             <constraint firstItem="r4a-wf-MT9" firstAttribute="width" secondItem="cyX-RM-nQg" secondAttribute="width" id="I0e-GO-OmH"/>
                             <constraint firstItem="r4a-wf-MT9" firstAttribute="centerX" secondItem="cyX-RM-nQg" secondAttribute="centerX" id="qoj-B5-WKg"/>
                         </constraints>

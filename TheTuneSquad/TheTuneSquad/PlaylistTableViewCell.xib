@@ -19,13 +19,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="350" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="fgj-pe-Uty">
-                        <rect key="frame" x="5" y="18" width="45" height="45"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="fgj-pe-Uty" secondAttribute="height" multiplier="1:1" id="NLn-qg-Kwt"/>
-                            <constraint firstAttribute="height" constant="45" id="tcd-a9-MpZ"/>
-                        </constraints>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6XD-hm-pa5">
                         <rect key="frame" x="55" y="8" width="65" height="65"/>
                         <constraints>
@@ -51,19 +44,30 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh9-KN-SpN">
+                        <rect key="frame" x="5" y="18" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Vh9-KN-SpN" secondAttribute="height" multiplier="1:1" id="Ovr-sb-yaX"/>
+                            <constraint firstAttribute="height" constant="45" id="lQl-Dj-M9m"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="Image"/>
+                        <connections>
+                            <action selector="playButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qOh-rF-Tlx"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="fgj-pe-Uty" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="1QR-oX-GYL"/>
                     <constraint firstAttribute="trailing" secondItem="fgN-Sv-NRt" secondAttribute="trailing" constant="5" id="F2T-yq-4Ab"/>
                     <constraint firstItem="fgN-Sv-NRt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="FwT-GB-mcg"/>
-                    <constraint firstItem="6XD-hm-pa5" firstAttribute="leading" secondItem="fgj-pe-Uty" secondAttribute="trailing" constant="5" id="W1e-V8-BZt"/>
+                    <constraint firstItem="6XD-hm-pa5" firstAttribute="leading" secondItem="Vh9-KN-SpN" secondAttribute="trailing" constant="5" id="Fwh-K0-ykg"/>
                     <constraint firstItem="jHi-9d-XaQ" firstAttribute="leading" secondItem="6XD-hm-pa5" secondAttribute="trailing" constant="10" id="XOO-KK-5dE"/>
+                    <constraint firstItem="Vh9-KN-SpN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Yva-nC-oXb"/>
                     <constraint firstItem="fgN-Sv-NRt" firstAttribute="leading" secondItem="6XD-hm-pa5" secondAttribute="trailing" constant="10" id="Zfm-kA-JTj"/>
                     <constraint firstItem="WPl-1c-tFl" firstAttribute="top" secondItem="jHi-9d-XaQ" secondAttribute="bottom" constant="5" id="cAi-Ex-OHq"/>
+                    <constraint firstItem="Vh9-KN-SpN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="jcX-De-7aI"/>
                     <constraint firstAttribute="bottom" secondItem="WPl-1c-tFl" secondAttribute="bottom" constant="5" id="lbn-iX-sRR"/>
                     <constraint firstItem="6XD-hm-pa5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nM0-7g-xwj"/>
                     <constraint firstAttribute="trailing" secondItem="jHi-9d-XaQ" secondAttribute="trailing" constant="5" id="q0g-tE-xOZ"/>
-                    <constraint firstItem="fgj-pe-Uty" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rD8-FN-VGA"/>
                     <constraint firstItem="WPl-1c-tFl" firstAttribute="leading" secondItem="6XD-hm-pa5" secondAttribute="trailing" constant="10" id="sTF-aq-h7y"/>
                     <constraint firstItem="jHi-9d-XaQ" firstAttribute="top" secondItem="fgN-Sv-NRt" secondAttribute="bottom" constant="5" id="y82-wd-o0y"/>
                     <constraint firstAttribute="trailing" secondItem="WPl-1c-tFl" secondAttribute="trailing" constant="5" id="z3q-vh-cdV"/>
