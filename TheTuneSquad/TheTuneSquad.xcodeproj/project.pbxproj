@@ -364,6 +364,7 @@
 				);
 				INFOPLIST_FILE = TheTuneSquad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcahn.TheTuneSquad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheTuneSquad-Bridging-Header.h";
@@ -384,6 +385,7 @@
 				);
 				INFOPLIST_FILE = TheTuneSquad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcahn.TheTuneSquad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheTuneSquad-Bridging-Header.h";
