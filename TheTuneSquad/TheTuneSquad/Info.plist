@@ -25,7 +25,7 @@
 			<string>com.christinalee.TheTuneSquad</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>TheTuneSquad</string>
+				<string>TuneSquadIOS</string>
 			</array>
 		</dict>
 	</array>

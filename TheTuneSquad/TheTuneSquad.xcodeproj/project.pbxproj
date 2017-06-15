@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
+		7F36E6E61EE880AF00416A9D /* BridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F36E6E51EE880AF00416A9D /* BridgeViewController.m */; };
 		BC589B031EE87CB8006B3F7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC589B021EE87CB8006B3F7F /* LoginViewController.swift */; };
 		BC589B051EE87CC4006B3F7F /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC589B041EE87CC4006B3F7F /* InputViewController.swift */; };
 		BC589B071EE87CD4006B3F7F /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC589B061EE87CD4006B3F7F /* PlaylistViewController.swift */; };
@@ -16,9 +16,6 @@
 		BC589B101EE89DF2006B3F7F /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC589B0E1EE89DF2006B3F7F /* PlaylistTableViewCell.swift */; };
 		BC589B111EE89DF2006B3F7F /* PlaylistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC589B0F1EE89DF2006B3F7F /* PlaylistTableViewCell.xib */; };
 		BC589B131EE8A742006B3F7F /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC589B121EE8A742006B3F7F /* UIExtensions.swift */; };
-
-		7F36E6E61EE880AF00416A9D /* BridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F36E6E51EE880AF00416A9D /* BridgeViewController.m */; };
-
 		BC92BEDF1EE72D2D00F06EDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92BEDE1EE72D2D00F06EDA /* AppDelegate.swift */; };
 		BC92BEE11EE72D2D00F06EDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92BEE01EE72D2D00F06EDA /* ViewController.swift */; };
 		BC92BEE41EE72D2D00F06EDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC92BEE21EE72D2D00F06EDA /* Main.storyboard */; };
@@ -30,7 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
+		7F36E6E31EE880AF00416A9D /* TheTuneSquad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheTuneSquad-Bridging-Header.h"; sourceTree = "<group>"; };
+		7F36E6E41EE880AF00416A9D /* BridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeViewController.h; sourceTree = "<group>"; };
+		7F36E6E51EE880AF00416A9D /* BridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeViewController.m; sourceTree = "<group>"; };
 		BC589B021EE87CB8006B3F7F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC589B041EE87CC4006B3F7F /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		BC589B061EE87CD4006B3F7F /* PlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
@@ -39,11 +38,6 @@
 		BC589B0E1EE89DF2006B3F7F /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
 		BC589B0F1EE89DF2006B3F7F /* PlaylistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistTableViewCell.xib; sourceTree = "<group>"; };
 		BC589B121EE8A742006B3F7F /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
-
-		7F36E6E31EE880AF00416A9D /* TheTuneSquad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheTuneSquad-Bridging-Header.h"; sourceTree = "<group>"; };
-		7F36E6E41EE880AF00416A9D /* BridgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeViewController.h; sourceTree = "<group>"; };
-		7F36E6E51EE880AF00416A9D /* BridgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeViewController.m; sourceTree = "<group>"; };
-
 		BC92BEDB1EE72D2D00F06EDA /* TheTuneSquad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheTuneSquad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC92BEDE1EE72D2D00F06EDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC92BEE01EE72D2D00F06EDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,7 +178,7 @@
 				TargetAttributes = {
 					BC92BEDA1EE72D2D00F06EDA = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 2E5N5854VJ;
+						DevelopmentTeam = JW369YLHP8;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -227,15 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				BC589B031EE87CB8006B3F7F /* LoginViewController.swift in Sources */,
 				BC589B051EE87CC4006B3F7F /* InputViewController.swift in Sources */,
 				BC589B071EE87CD4006B3F7F /* PlaylistViewController.swift in Sources */,
 				BC589B131EE8A742006B3F7F /* UIExtensions.swift in Sources */,
 				BC589B0D1EE8974A006B3F7F /* Track.swift in Sources */,
-
 				7F36E6E61EE880AF00416A9D /* BridgeViewController.m in Sources */,
-
 				BC92BEE11EE72D2D00F06EDA /* ViewController.swift in Sources */,
 				BCCA29411EE7362300569A42 /* API.swift in Sources */,
 				BC92BEDF1EE72D2D00F06EDA /* AppDelegate.swift in Sources */,
@@ -366,13 +357,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2E5N5854VJ;
+				DEVELOPMENT_TEAM = JW369YLHP8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TheTuneSquad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcahn.TheTuneSquad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheTuneSquad-Bridging-Header.h";
@@ -386,13 +378,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2E5N5854VJ;
+				DEVELOPMENT_TEAM = JW369YLHP8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TheTuneSquad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcahn.TheTuneSquad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheTuneSquad-Bridging-Header.h";
