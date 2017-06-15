@@ -26,6 +26,10 @@ class API {
         
         self.components.path = "/search"
         
-        if let token = Use
+        if let token = UserDefaults.standard.getAccessToken() {
+            let queryItem = URLQueryItem(name: "access_token", value: token)
+            self.components.queryItems = [queryItem]
+            
+        }
     }
 }
