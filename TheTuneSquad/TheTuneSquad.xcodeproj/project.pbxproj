@@ -23,6 +23,7 @@
 		BC92BEE91EE72D2D00F06EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC92BEE71EE72D2D00F06EDA /* LaunchScreen.storyboard */; };
 		BC92BEF91EE72F6100F06EDA /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC92BEF71EE72F6100F06EDA /* SpotifyAudioPlayback.framework */; };
 		BC92BEFA1EE72F6100F06EDA /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC92BEF81EE72F6100F06EDA /* SpotifyAuthentication.framework */; };
+		BCABF0981EF3150B008BF53E /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCABF0971EF3150B008BF53E /* FoundationExtensions.swift */; };
 		BCCA29411EE7362300569A42 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA29401EE7362300569A42 /* API.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		BC92BEEA1EE72D2D00F06EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC92BEF71EE72F6100F06EDA /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		BC92BEF81EE72F6100F06EDA /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		BCABF0971EF3150B008BF53E /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		BCCA29401EE7362300569A42 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,10 +70,10 @@
 			children = (
 				7F36E6E41EE880AF00416A9D /* BridgeViewController.h */,
 				7F36E6E51EE880AF00416A9D /* BridgeViewController.m */,
+				7F36E6E31EE880AF00416A9D /* TheTuneSquad-Bridging-Header.h */,
 				BC92BEDD1EE72D2D00F06EDA /* TheTuneSquad */,
 				BC92BEDC1EE72D2D00F06EDA /* Products */,
 				BC92BEF01EE72E6D00F06EDA /* Frameworks */,
-				7F36E6E31EE880AF00416A9D /* TheTuneSquad-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				BC589B121EE8A742006B3F7F /* UIExtensions.swift */,
+				BCABF0971EF3150B008BF53E /* FoundationExtensions.swift */,
 				BC589B0C1EE8974A006B3F7F /* Track.swift */,
 				BCCA29401EE7362300569A42 /* API.swift */,
 				BC589B081EE88ECF006B3F7F /* Artist.swift */,
@@ -229,6 +232,7 @@
 				7F36E6E61EE880AF00416A9D /* BridgeViewController.m in Sources */,
 				BC92BEE11EE72D2D00F06EDA /* ViewController.swift in Sources */,
 				BCCA29411EE7362300569A42 /* API.swift in Sources */,
+				BCABF0981EF3150B008BF53E /* FoundationExtensions.swift in Sources */,
 				BC92BEDF1EE72D2D00F06EDA /* AppDelegate.swift in Sources */,
 				BC589B091EE88ECF006B3F7F /* Artist.swift in Sources */,
 				BC589B101EE89DF2006B3F7F /* PlaylistTableViewCell.swift in Sources */,
