@@ -22,7 +22,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.alexcahn.TheTuneSquad</string>
+			<string>com.christinalee.TheTuneSquad</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>TheTuneSquad</string>
