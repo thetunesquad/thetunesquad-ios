@@ -83,7 +83,7 @@ class API {
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: form, options: .prettyPrinted)
             } catch let error {
-                print(error.localizedDescription)
+                print("error token \(error.localizedDescription)")
             }
             
             let task = session.dataTask(with: request as URLRequest, completionHandler: { (data, reponse, error) in
@@ -93,7 +93,7 @@ class API {
                 
                 guard let dataString = String(data: data, encoding: .utf8) else { complete(success: false); return }
                 
-                print(dataString)
+                print("datastring \(dataString)")
                 guard let token = dataString.components(separatedBy: "&").first?.components(separatedBy: "=").last else { complete(success: false); return }
                 
                 let tokenResult = UserDefaults.standard.save(accessToken: token)
