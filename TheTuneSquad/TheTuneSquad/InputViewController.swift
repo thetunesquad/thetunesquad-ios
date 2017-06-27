@@ -25,6 +25,10 @@ class InputViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func update() {
+        print("inside function")
+    }
+    
     @IBAction func goButtonPressed(_ sender: UIButton) {
     }
     

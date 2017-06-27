@@ -47,6 +47,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        API.shared.tokenRequestFor(url: url, saveOptions: .userDefaults) { (success) in
+            if let loginViewController = self.loginController, let inputViewCOntroller = self.inputController {
+                loginViewController.dismissLoginController()
+                inputViewController.update()
+            }
+        }
         return false
     }
     
