@@ -19,27 +19,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="350" height="80.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6XD-hm-pa5">
-                        <rect key="frame" x="55" y="8" width="65" height="65"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="6XD-hm-pa5" secondAttribute="height" multiplier="1:1" id="5GG-8f-zMq"/>
-                            <constraint firstAttribute="height" constant="65" id="j4w-RS-2Cy"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-Sv-NRt">
-                        <rect key="frame" x="130" y="5" width="215" height="19"/>
+                        <rect key="frame" x="307.5" y="5" width="37.5" height="19"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHi-9d-XaQ">
-                        <rect key="frame" x="130" y="29" width="215" height="22.5"/>
+                        <rect key="frame" x="315" y="29" width="30" height="22.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPl-1c-tFl">
-                        <rect key="frame" x="130" y="56.5" width="215" height="19"/>
+                        <rect key="frame" x="299" y="56.5" width="46" height="19"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -59,22 +52,16 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="fgN-Sv-NRt" secondAttribute="trailing" constant="5" id="F2T-yq-4Ab"/>
                     <constraint firstItem="fgN-Sv-NRt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="FwT-GB-mcg"/>
-                    <constraint firstItem="6XD-hm-pa5" firstAttribute="leading" secondItem="Vh9-KN-SpN" secondAttribute="trailing" constant="5" id="Fwh-K0-ykg"/>
-                    <constraint firstItem="jHi-9d-XaQ" firstAttribute="leading" secondItem="6XD-hm-pa5" secondAttribute="trailing" constant="10" id="XOO-KK-5dE"/>
                     <constraint firstItem="Vh9-KN-SpN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Yva-nC-oXb"/>
-                    <constraint firstItem="fgN-Sv-NRt" firstAttribute="leading" secondItem="6XD-hm-pa5" secondAttribute="trailing" constant="10" id="Zfm-kA-JTj"/>
                     <constraint firstItem="WPl-1c-tFl" firstAttribute="top" secondItem="jHi-9d-XaQ" secondAttribute="bottom" constant="5" id="cAi-Ex-OHq"/>
                     <constraint firstItem="Vh9-KN-SpN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="jcX-De-7aI"/>
                     <constraint firstAttribute="bottom" secondItem="WPl-1c-tFl" secondAttribute="bottom" constant="5" id="lbn-iX-sRR"/>
-                    <constraint firstItem="6XD-hm-pa5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nM0-7g-xwj"/>
                     <constraint firstAttribute="trailing" secondItem="jHi-9d-XaQ" secondAttribute="trailing" constant="5" id="q0g-tE-xOZ"/>
-                    <constraint firstItem="WPl-1c-tFl" firstAttribute="leading" secondItem="6XD-hm-pa5" secondAttribute="trailing" constant="10" id="sTF-aq-h7y"/>
                     <constraint firstItem="jHi-9d-XaQ" firstAttribute="top" secondItem="fgN-Sv-NRt" secondAttribute="bottom" constant="5" id="y82-wd-o0y"/>
                     <constraint firstAttribute="trailing" secondItem="WPl-1c-tFl" secondAttribute="trailing" constant="5" id="z3q-vh-cdV"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="albumArt" destination="6XD-hm-pa5" id="LOq-94-5lU"/>
                 <outlet property="albumLabel" destination="WPl-1c-tFl" id="D1y-ak-gFR"/>
                 <outlet property="artistLabel" destination="fgN-Sv-NRt" id="lAj-ya-diH"/>
                 <outlet property="titleLabel" destination="jHi-9d-XaQ" id="mHW-zU-wgt"/>

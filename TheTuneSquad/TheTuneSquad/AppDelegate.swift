@@ -7,27 +7,24 @@
 //
 
 import UIKit
-import SafariServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
     var loginController : LoginViewController?
     var inputController : InputViewController?
 
-//    var auth = SPTAuth()
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        auth.redirectURL = URL(string: "TuneSquadIOS://returnAfterLogin")
-//            auth.sessionUserDefaultsKey = "current session"
         
         if let token = UserDefaults.standard.getAccessToken() {
             print("in app delegate \(token)")
         } else {
             presentLoginController()
         }
+        
+//        presentLoginController()
         
         return true
     }
@@ -47,6 +44,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        API.shared.tokenRequestFor(url: url, saveOptions: .userDefaults) { (success) in
+            if let loginViewController = self.loginController, let inputViewController = self.inputController {
+                loginViewController.dismissLoginController()
+                inputViewController.update()
+            }
+        }
         return false
     }
     
