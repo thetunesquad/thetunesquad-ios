@@ -30,7 +30,7 @@ class API {
     
     let spotifyClientId = kSpotifyClientId
     let spotifyClientSecret = kSpotifyClientSecret
-    let spotifyRedirectURI = "TuneSquadIOS://returnAfterLogin"
+    let spotifyRedirectURI = "TuneSquadIOS://"
     
     private init() {
         self.session = URLSession(configuration: .default)

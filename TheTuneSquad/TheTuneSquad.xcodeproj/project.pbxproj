@@ -22,6 +22,7 @@
 		BCABF0981EF3150B008BF53E /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCABF0971EF3150B008BF53E /* FoundationExtensions.swift */; };
 		BCABF09A1EF317C3008BF53E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCABF0991EF317C3008BF53E /* Credentials.swift */; };
 		BCCA29411EE7362300569A42 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA29401EE7362300569A42 /* API.swift */; };
+		BCFDF5FA1F030E8B0032D137 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFDF5F91F030E8B0032D137 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		BCABF0971EF3150B008BF53E /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		BCABF0991EF317C3008BF53E /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		BCCA29401EE7362300569A42 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BCFDF5F91F030E8B0032D137 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		BCCA29441EE7363C00569A42 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				BCFDF5F91F030E8B0032D137 /* WebViewController.swift */,
 				BC589B021EE87CB8006B3F7F /* LoginViewController.swift */,
 				BC589B041EE87CC4006B3F7F /* InputViewController.swift */,
 				BC589B061EE87CD4006B3F7F /* PlaylistViewController.swift */,
@@ -216,6 +219,7 @@
 				BCABF09A1EF317C3008BF53E /* Credentials.swift in Sources */,
 				BC589B0D1EE8974A006B3F7F /* Track.swift in Sources */,
 				BCCA29411EE7362300569A42 /* API.swift in Sources */,
+				BCFDF5FA1F030E8B0032D137 /* WebViewController.swift in Sources */,
 				BCABF0981EF3150B008BF53E /* FoundationExtensions.swift in Sources */,
 				BC92BEDF1EE72D2D00F06EDA /* AppDelegate.swift in Sources */,
 				BC589B091EE88ECF006B3F7F /* Artist.swift in Sources */,
