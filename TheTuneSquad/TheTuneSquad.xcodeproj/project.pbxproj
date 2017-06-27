@@ -24,6 +24,7 @@
 		BC92BEF91EE72F6100F06EDA /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC92BEF71EE72F6100F06EDA /* SpotifyAudioPlayback.framework */; };
 		BC92BEFA1EE72F6100F06EDA /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC92BEF81EE72F6100F06EDA /* SpotifyAuthentication.framework */; };
 		BCABF0981EF3150B008BF53E /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCABF0971EF3150B008BF53E /* FoundationExtensions.swift */; };
+		BCABF09A1EF317C3008BF53E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCABF0991EF317C3008BF53E /* Credentials.swift */; };
 		BCCA29411EE7362300569A42 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA29401EE7362300569A42 /* API.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		BC92BEF71EE72F6100F06EDA /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		BC92BEF81EE72F6100F06EDA /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		BCABF0971EF3150B008BF53E /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		BCABF0991EF317C3008BF53E /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		BCCA29401EE7362300569A42 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 				BCABF0971EF3150B008BF53E /* FoundationExtensions.swift */,
 				BC589B0C1EE8974A006B3F7F /* Track.swift */,
 				BCCA29401EE7362300569A42 /* API.swift */,
+				BCABF0991EF317C3008BF53E /* Credentials.swift */,
 				BC589B081EE88ECF006B3F7F /* Artist.swift */,
 			);
 			name = model;
@@ -228,6 +231,7 @@
 				BC589B051EE87CC4006B3F7F /* InputViewController.swift in Sources */,
 				BC589B071EE87CD4006B3F7F /* PlaylistViewController.swift in Sources */,
 				BC589B131EE8A742006B3F7F /* UIExtensions.swift in Sources */,
+				BCABF09A1EF317C3008BF53E /* Credentials.swift in Sources */,
 				BC589B0D1EE8974A006B3F7F /* Track.swift in Sources */,
 				7F36E6E61EE880AF00416A9D /* BridgeViewController.m in Sources */,
 				BC92BEE11EE72D2D00F06EDA /* ViewController.swift in Sources */,
