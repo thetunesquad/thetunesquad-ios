@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lAW-je-hCU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="BX2-xa-rqA">
             <objects>
-                <viewController id="3zJ-DF-b1C" customClass="LoginViewController" customModule="TheTuneSquad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="3zJ-DF-b1C" customClass="LoginViewController" customModule="TheTuneSquad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zZF-74-MHJ"/>
                         <viewControllerLayoutGuide type="bottom" id="7TH-2r-Hkl"/>
@@ -38,7 +38,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButton:" destination="3zJ-DF-b1C" eventType="touchUpInside" id="92u-CD-RBY"/>
                                     <action selector="loginButtonPressed:" destination="3zJ-DF-b1C" eventType="touchUpInside" id="6MF-2a-aB7"/>
                                 </connections>
                             </button>
@@ -56,54 +55,16 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="DSe-R7-U9e" id="9mb-ic-Fo7"/>
-                        <outlet property="loginButtonPressed" destination="DSe-R7-U9e" id="23t-E9-0F8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8z-Ap-yXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="528.79999999999995" y="-512.29385307346331"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheTuneSquad" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sad-W6-Agd">
-                                <rect key="frame" x="95" y="318" width="184" height="30"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Login to Spotify"/>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YcP-3x-cXV"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="sad-W6-Agd" secondAttribute="trailing" constant="96" id="EBJ-tc-eaS"/>
-                            <constraint firstItem="sad-W6-Agd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="298" id="M5Z-Dx-Ult"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sad-W6-Agd" secondAttribute="bottom" constant="319" id="c64-I5-RO6"/>
-                            <constraint firstItem="sad-W6-Agd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="95" id="jEX-S0-1UQ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="loginButtonPressed" destination="sad-W6-Agd" id="7WK-Wg-nhI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="191" y="135"/>
         </scene>
         <!--Input View Controller-->
         <scene sceneID="h82-dZ-h6i">
             <objects>
-                <viewController id="lAW-je-hCU" customClass="InputViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InputViewController" id="lAW-je-hCU" customClass="InputViewController" customModule="TheTuneSquad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K3o-Ev-4eK"/>
                         <viewControllerLayoutGuide type="bottom" id="hQO-ce-3vI"/>
@@ -118,20 +79,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lady Gaga" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96R-mh-3yd">
-                                <rect key="frame" x="47" y="116" width="281" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Frank Sinatra" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SZd-CU-BVu">
-                                <rect key="frame" x="47" y="186" width="281" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9P-g7-K0Y">
-                                <rect key="frame" x="-0.5" y="266" width="375" height="100"/>
+                                <rect key="frame" x="-0.5" y="283.5" width="375" height="100"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="GO!">
@@ -145,24 +94,14 @@
                         <color key="backgroundColor" red="0.11372549019607843" green="0.72549019607843135" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZX4-0H-tK7" firstAttribute="centerX" secondItem="LEy-UX-jCv" secondAttribute="centerX" id="256-vJ-1bS"/>
-                            <constraint firstItem="W9P-g7-K0Y" firstAttribute="top" secondItem="SZd-CU-BVu" secondAttribute="bottom" constant="50" id="A2P-Tq-Mml"/>
                             <constraint firstItem="W9P-g7-K0Y" firstAttribute="height" secondItem="LEy-UX-jCv" secondAttribute="height" multiplier="0.15" id="JJD-a4-gIX"/>
-                            <constraint firstItem="SZd-CU-BVu" firstAttribute="top" secondItem="96R-mh-3yd" secondAttribute="bottom" constant="40" id="KKZ-US-xHA"/>
-                            <constraint firstItem="96R-mh-3yd" firstAttribute="width" secondItem="LEy-UX-jCv" secondAttribute="width" multiplier="0.75" id="KQh-F3-d5h"/>
                             <constraint firstItem="W9P-g7-K0Y" firstAttribute="width" secondItem="LEy-UX-jCv" secondAttribute="width" id="S4H-kP-MFk"/>
-                            <constraint firstItem="SZd-CU-BVu" firstAttribute="centerX" secondItem="LEy-UX-jCv" secondAttribute="centerX" id="SfO-r3-UwF"/>
-                            <constraint firstItem="96R-mh-3yd" firstAttribute="centerX" secondItem="LEy-UX-jCv" secondAttribute="centerX" id="Tmd-6T-BDx"/>
                             <constraint firstItem="ZX4-0H-tK7" firstAttribute="width" secondItem="LEy-UX-jCv" secondAttribute="width" id="Z6L-jT-hYr"/>
                             <constraint firstItem="W9P-g7-K0Y" firstAttribute="centerX" secondItem="LEy-UX-jCv" secondAttribute="centerX" id="mBe-kC-G7X"/>
                             <constraint firstItem="ZX4-0H-tK7" firstAttribute="top" secondItem="K3o-Ev-4eK" secondAttribute="bottom" constant="20" id="sug-pd-oUR"/>
-                            <constraint firstItem="96R-mh-3yd" firstAttribute="top" secondItem="ZX4-0H-tK7" secondAttribute="bottom" constant="50" id="tiA-Aw-vEB"/>
-                            <constraint firstItem="SZd-CU-BVu" firstAttribute="width" secondItem="LEy-UX-jCv" secondAttribute="width" multiplier="0.75" id="wdY-6D-b3R"/>
+                            <constraint firstItem="W9P-g7-K0Y" firstAttribute="centerY" secondItem="LEy-UX-jCv" secondAttribute="centerY" id="u8d-Dj-PtR"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="artist1TextField" destination="96R-mh-3yd" id="9Jz-gf-ekh"/>
-                        <outlet property="artist2TextField" destination="SZd-CU-BVu" id="grW-rB-t9y"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7d-Nq-Baq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,16 +122,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r4a-wf-MT9">
                                 <rect key="frame" x="-0.5" y="66.5" width="375" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="N3w-SK-Pbc">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N3w-SK-Pbc" id="1dq-kE-kUM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -41,7 +41,7 @@ class API {
     }
     
     func oAuth(){
-        if let requestURL = URL(string: "\(koAuthBaseURLString)authorize/?client_id=\(spotifyClientId)&reponse_type=code&redirect_uri=\(spotifyRedirectURI)&scope=playlist-modify-public") {
+        if let requestURL = URL(string: "\(koAuthBaseURLString)authorize/?client_id=\(spotifyClientId)&response_type=code&redirect_uri=\(spotifyRedirectURI)&scope=playlist-modify-public") {
             print(requestURL.absoluteString)
             UIApplication.shared.open(requestURL)
         }

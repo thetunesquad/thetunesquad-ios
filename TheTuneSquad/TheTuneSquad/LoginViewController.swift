@@ -44,9 +44,8 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loginButtonPressed(_ sender: UIButton) {
+    @IBAction func loginButtonPressed(_ sender: Any) {
         API.shared.oAuth()
-        
     }
     
     func dismissLoginController() {
