@@ -32,4 +32,6 @@ class InputViewController: UIViewController {
     @IBAction func goButtonPressed(_ sender: UIButton) {
     }
     
+    @IBAction func logoutPressed(_ sender: UIButton) {
+    }
 }

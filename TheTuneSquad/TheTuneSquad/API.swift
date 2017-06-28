@@ -64,6 +64,8 @@ class API {
         do {
             let code = try self.getCodeFrom(url: url)
             
+            print("code: \(code)")
+            
             let session = URLSession.shared
             
             let requestString = "\(koAuthBaseURLString)api/token"
@@ -71,20 +73,22 @@ class API {
             let urlString = URL(string: requestString)!
             
             var request = URLRequest(url: urlString)
-            request.httpMethod = "GET"
-            let authString = NSString(format: "%@:%@", spotifyClientId, spotifyClientSecret)
+            request.httpMethod = "POST"
+            
+            let authString = NSString(format: "%@ : %@", spotifyClientId, spotifyClientSecret)
             let authData = authString.data(using: String.Encoding.utf8.rawValue)! as NSData
             let base64 = authData.base64EncodedString(options: NSData.Base64EncodingOptions())
-            let form = ["code" : code, "redirect_uri": spotifyRedirectURI, "grant_type" : "authorization_code"] as Dictionary <String, String>
-            
-            
+            let json : [String : Any] = ["grant_type" : "authorization_code", "code" : code, "redirect_uri": spotifyRedirectURI]
+
+            let jsonData = try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+            request.httpBody = jsonData
             request.setValue("Basic \(base64)", forHTTPHeaderField: "Authorization")
-            
-            do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: form, options: .prettyPrinted)
-            } catch let error {
-                print("error token \(error.localizedDescription)")
-            }
+
+//            do {
+//                request.httpBody = try JSONSerialization.data(withJSONObject: form, options: .prettyPrinted)
+//            } catch let error {
+//                print("error token \(error.localizedDescription)")
+//            }
             
             let task = session.dataTask(with: request as URLRequest, completionHandler: { (data, reponse, error) in
                 if error != nil { complete(success: false) }
@@ -93,11 +97,11 @@ class API {
                 
                 guard let dataString = String(data: data, encoding: .utf8) else { complete(success: false); return }
                 
-                print("datastring \(dataString)")
+                print("datastring: \(dataString)")
                 guard let token = dataString.components(separatedBy: "&").first?.components(separatedBy: "=").last else { complete(success: false); return }
                 
                 let tokenResult = UserDefaults.standard.save(accessToken: token)
-                print("Token Result \(tokenResult)")
+                print("Token Result: \(tokenResult)")
                 complete(success: true)
 
             })

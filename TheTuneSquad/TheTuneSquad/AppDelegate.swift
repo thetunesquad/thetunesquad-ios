@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         if let token = UserDefaults.standard.getAccessToken() {
-            print("in app delegate \(token)")
+            print("in app delegate token: \(token)")
         } else {
             presentLoginController()
         }
@@ -53,29 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return false
     }
-    
-//    // 1
-//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//        // 2- check if app can handle redirect URL
-//        if auth.canHandle(auth.redirectURL) {
-//            // 3 - handle callback in closure
-//            auth.handleAuthCallback(withTriggeredAuthURL: url, callback: { (error, session) in
-//                // 4- handle error
-//                if error != nil {
-//                    print("error!")
-//                }
-//                // 5- Add session to User Defaults
-//                let userDefaults = UserDefaults.standard
-//                let sessionData = NSKeyedArchiver.archivedData(withRootObject: session as Any)
-//                userDefaults.set(sessionData, forKey: "SpotifySession")
-//                userDefaults.synchronize()
-//                // 6 - Tell notification center login is successful
-//                NotificationCenter.default.post(name: Notification.Name(rawValue: "loginSuccessfull"), object: nil)
-//            })
-//            return true
-//        }
-//        return false
-//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
