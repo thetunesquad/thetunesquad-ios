@@ -81,16 +81,16 @@ class API {
             let json : [String : Any] = ["grant_type" : "authorization_code", "code" : code, "redirect_uri": spotifyRedirectURI]
 
             let jsonData = try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-            request.httpBody = jsonData
+            
             request.setValue("Basic \(base64)", forHTTPHeaderField: "Authorization")
 
 //            do {
-//                request.httpBody = try JSONSerialization.data(withJSONObject: form, options: .prettyPrinted)
+//                request.httpBody = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
 //            } catch let error {
 //                print("error token \(error.localizedDescription)")
 //            }
-            
-            let task = session.dataTask(with: request as URLRequest, completionHandler: { (data, reponse, error) in
+            request.httpBody = jsonData
+            let task = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
                 if error != nil { complete(success: false) }
                 
                 guard let data = data else { complete(success: false); return }
