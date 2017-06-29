@@ -33,5 +33,11 @@ class InputViewController: UIViewController {
     }
     
     @IBAction func logoutPressed(_ sender: UIButton) {
+        UserDefaults.standard.set(nil, forKey: "access_token")
+        if (UserDefaults.standard.string(forKey: "access_token") != nil) {
+            print(UserDefaults.standard.value(forKey: "access_token") as Any)
+        } else {
+            print("no token saved in user defaults")
+        }
     }
 }
