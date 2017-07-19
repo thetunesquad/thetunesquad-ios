@@ -36,8 +36,8 @@ class API {
         self.session = URLSession(configuration: .default)
         self.components = URLComponents()
         
-        self.components.scheme = "https"
-        self.components.host = "api.spotify.com/v1"
+//        self.components.scheme = "https"
+//        self.components.host = "api.spotify.com/v1"
     }
     
     func oAuth(){
@@ -66,7 +66,7 @@ class API {
             
             print("code: \(code)")
             
-            let session = URLSession.shared
+//            let session = URLSession.shared
             
             let requestString = "\(koAuthBaseURLString)api/token"
             
@@ -75,20 +75,36 @@ class API {
             var request = URLRequest(url: urlString)
             request.httpMethod = "POST"
             
-            let authString = NSString(format: "%@ : %@", spotifyClientId, spotifyClientSecret)
-            let authData = authString.data(using: String.Encoding.utf8.rawValue)! as NSData
-            let base64 = authData.base64EncodedString(options: NSData.Base64EncodingOptions())
-            let json : [String : Any] = ["grant_type" : "authorization_code", "code" : code, "redirect_uri": spotifyRedirectURI]
+            let grant = "authorization_code"
+            
+//            let authString = NSString(format: "%@ : %@", spotifyClientId, spotifyClientSecret)
+//            let authData = authString.data(using: String.Encoding.utf8.rawValue)! as NSData
+//            let base64 = authData.base64EncodedString(options: NSData.Base64EncodingOptions())
+            
+            let json : [String : Any] = ["client_id" : spotifyClientId, "client_secret" :  spotifyClientSecret, "grant_type" : grant, "code" : code, "redirect_uri": spotifyRedirectURI]
 
-//            let jsonData = try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-//            request.httpBody = jsonData
-            request.setValue("Basic \(base64)", forHTTPHeaderField: "Authorization")
+            let jsonData = try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+            request.httpBody = jsonData
+//            request.setValue("Basic \(base64)", forHTTPHeaderField: "Authorization")
+//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//            var request = URLRequest(url:URL(string:"http://localhost:8888/login")!)
+//            request.httpMethod = "POST"
+//            
+//            let params = ["email":"name@mail.com", "password":"password"]
+//            request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//            
+//            URLSession.shared.dataTask(with: request) { (data:Data?, response:URLResponse?, error:Error?) in
+//                if let safeData = data{
+//                    print("response: \(String(data:safeData, encoding:.utf8))")
+//                }
+//            }
 
-            do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-            } catch let error {
-                print("error token \(error.localizedDescription)")
-            }
+//            do {
+//                request.httpBody = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+//            } catch let error {
+//                print("error token \(error.localizedDescription)")
+//            }
 
             let task = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
                 if error != nil { complete(success: false) }
