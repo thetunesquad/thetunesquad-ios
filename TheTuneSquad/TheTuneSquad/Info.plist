@@ -21,7 +21,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>TuneSquadIOS</string>
+				<string>tunesquadios</string>
 			</array>
 		</dict>
 	</array>

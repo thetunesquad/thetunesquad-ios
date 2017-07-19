@@ -10,6 +10,7 @@ import UIKit
 
 let koAuthBaseURLString = "https://accounts.spotify.com/"
 
+
 enum SpotifyAuthError : Error {
     case extractingCode
 }
@@ -30,14 +31,14 @@ class API {
     
     let spotifyClientId = kSpotifyClientId
     let spotifyClientSecret = kSpotifyClientSecret
-    let spotifyRedirectURI = "TuneSquadIOS://"
+    let spotifyRedirectURI = "tunesquadios://"
     
     private init() {
         self.session = URLSession(configuration: .default)
         self.components = URLComponents()
         
-//        self.components.scheme = "https"
-//        self.components.host = "api.spotify.com/v1"
+        self.components.scheme = "https"
+        self.components.host = "api.spotify.com/v1"
     }
     
     func oAuth(){
@@ -51,7 +52,6 @@ class API {
         guard let code = url.absoluteString.components(separatedBy: "&").first?.components(separatedBy: "=").last else {
             throw SpotifyAuthError.extractingCode
         }
-        
         return code
     }
     
@@ -66,7 +66,7 @@ class API {
             
             print("code: \(code)")
             
-//            let session = URLSession.shared
+            let session = URLSession.shared
             
             let requestString = "\(koAuthBaseURLString)api/token"
             
@@ -77,22 +77,23 @@ class API {
             
             let grant = "authorization_code"
             
-//            let authString = NSString(format: "%@ : %@", spotifyClientId, spotifyClientSecret)
-//            let authData = authString.data(using: String.Encoding.utf8.rawValue)! as NSData
-//            let base64 = authData.base64EncodedString(options: NSData.Base64EncodingOptions())
+            let authString = NSString(format: "%@ : %@", spotifyClientId, spotifyClientSecret)
+            let authData = authString.data(using: String.Encoding.utf8.rawValue)! as NSData
+            let base64 = authData.base64EncodedString(options: NSData.Base64EncodingOptions())
             
-            let json : [String : Any] = ["client_id" : spotifyClientId, "client_secret" :  spotifyClientSecret, "grant_type" : grant, "code" : code, "redirect_uri": spotifyRedirectURI]
+            let json : [String : Any] = ["grant_type" : grant, "code" : code, "redirect_uri": spotifyRedirectURI]
 
             let jsonData = try! JSONSerialization.data(withJSONObject: json, options: [])
             request.httpBody = jsonData
-
-
-            let task = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
+            request.setValue("Basic \(base64)", forHTTPHeaderField: "Authorization:")
+            
+            session.dataTask(with: request, completionHandler: { (data, response, error) in
                 if error != nil { complete(success: false) }
                 
                 guard let data = data else { complete(success: false); return }
                 
                 guard let dataString = String(data: data, encoding: .utf8) else { complete(success: false); return }
+              
                 
                 print("datastring: \(dataString)")
                 guard let token = dataString.components(separatedBy: "&").first?.components(separatedBy: "=").last else { complete(success: false); return }
@@ -101,8 +102,7 @@ class API {
                 print("Token Result: \(tokenResult)")
                 complete(success: true)
 
-            })
-            task.resume()
+            }).resume()
             
         } catch {
             print(error)

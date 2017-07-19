@@ -26,7 +26,8 @@ class InputViewController: UIViewController {
     }
     
     func update() {
-        print("inside function")
+        print("inside function update")
+        print(UserDefaults.standard.value(forKey: "access_token") as Any)
     }
     
     @IBAction func goButtonPressed(_ sender: UIButton) {
