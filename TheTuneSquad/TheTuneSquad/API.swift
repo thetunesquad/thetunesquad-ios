@@ -83,28 +83,9 @@ class API {
             
             let json : [String : Any] = ["client_id" : spotifyClientId, "client_secret" :  spotifyClientSecret, "grant_type" : grant, "code" : code, "redirect_uri": spotifyRedirectURI]
 
-            let jsonData = try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+            let jsonData = try! JSONSerialization.data(withJSONObject: json, options: [])
             request.httpBody = jsonData
-//            request.setValue("Basic \(base64)", forHTTPHeaderField: "Authorization")
-//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//            var request = URLRequest(url:URL(string:"http://localhost:8888/login")!)
-//            request.httpMethod = "POST"
-//            
-//            let params = ["email":"name@mail.com", "password":"password"]
-//            request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
-//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//            
-//            URLSession.shared.dataTask(with: request) { (data:Data?, response:URLResponse?, error:Error?) in
-//                if let safeData = data{
-//                    print("response: \(String(data:safeData, encoding:.utf8))")
-//                }
-//            }
 
-//            do {
-//                request.httpBody = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-//            } catch let error {
-//                print("error token \(error.localizedDescription)")
-//            }
 
             let task = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
                 if error != nil { complete(success: false) }
