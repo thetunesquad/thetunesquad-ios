@@ -37,7 +37,7 @@ class InputViewController: UIViewController {
         if (UserDefaults.standard.string(forKey: "access_token") != nil) {
             print(UserDefaults.standard.value(forKey: "access_token") as Any)
         } else {
-            print("no token saved in user defaults")
+            print("no token saved in user defaults, logout worked")
         }
     }
 }
