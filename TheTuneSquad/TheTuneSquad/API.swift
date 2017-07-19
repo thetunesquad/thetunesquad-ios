@@ -66,28 +66,47 @@ class API {
             
             print("code: \(code)")
             
-            let session = URLSession.shared
+//            let session = URLSession.shared
             
             let requestString = "\(koAuthBaseURLString)api/token"
             
             let urlString = URL(string: requestString)!
+//                let session = URLSession(configuration: .default)
+//                session.dataTask(with: urlString, completionHandler: { (data, response, error) in
+//                    if error != nil { complete(success: false)}
+//                    guard let data = data else { complete(success: false); return }
+//                    
+//                    guard let dataString = String(data: data, encoding: .utf8) else { complete(success: false); return }
+//                    
+//                    
+//                    print("datastring: \(dataString)")
+//                    guard let token = dataString.components(separatedBy: "&").first?.components(separatedBy: "=").last else { complete(success: false); return }
+//                    
+//                    let tokenResult = UserDefaults.standard.save(accessToken: token)
+//                    print("Token Result: \(tokenResult)")
+//                    complete(success: true)
+//
+//                    
+//                }).resume()
+//            }
             
             var request = URLRequest(url: urlString)
             request.httpMethod = "POST"
             
-            let grant = "authorization_code"
+//            let grant = "authorization_code"
             
-            let authString = NSString(format: "%@ : %@", spotifyClientId, spotifyClientSecret)
-            let authData = authString.data(using: String.Encoding.utf8.rawValue)! as NSData
-            let base64 = authData.base64EncodedString(options: NSData.Base64EncodingOptions())
+            let authString = String(format: "%@ : %@", spotifyClientId, spotifyClientSecret)
+            let authData = authString.data(using: String.Encoding.utf8)! as NSData
+            let base64 = authData.base64EncodedData(options: NSData.Base64EncodingOptions(rawValue:0))
+//            let myBase64Data = myNSData.base64EncodedData(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
             
-            let json : [String : Any] = ["grant_type" : grant, "code" : code, "redirect_uri": spotifyRedirectURI]
+            let json : [String : String] = ["grant_type" : "authorization_code", "code" : code, "redirect_uri": spotifyRedirectURI]
 
             let jsonData = try! JSONSerialization.data(withJSONObject: json, options: [])
             request.httpBody = jsonData
             request.setValue("Basic \(base64)", forHTTPHeaderField: "Authorization:")
             
-            session.dataTask(with: request, completionHandler: { (data, response, error) in
+            session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
                 if error != nil { complete(success: false) }
                 
                 guard let data = data else { complete(success: false); return }
