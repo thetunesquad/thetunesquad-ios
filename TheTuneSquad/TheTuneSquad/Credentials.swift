@@ -9,4 +9,4 @@
 import UIKit
 
 let kSpotifyClientId = "d65d57b404954ef5a16f181b9c8ed8d0"
-let kSpotifyClientSecret = "72849b85f7124952a9c1e6bbd88943dd"
+let kSpotifyClientSecret = "a9f77124ccd24d8e835ccbcef07afd88"

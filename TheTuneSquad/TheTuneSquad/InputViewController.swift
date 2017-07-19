@@ -26,12 +26,19 @@ class InputViewController: UIViewController {
     }
     
     func update() {
-        print("inside function")
+        print("inside function update")
+        print(UserDefaults.standard.value(forKey: "access_token") as Any)
     }
     
     @IBAction func goButtonPressed(_ sender: UIButton) {
     }
     
     @IBAction func logoutPressed(_ sender: UIButton) {
+        UserDefaults.standard.set(nil, forKey: "access_token")
+        if (UserDefaults.standard.string(forKey: "access_token") != nil) {
+            print(UserDefaults.standard.value(forKey: "access_token") as Any)
+        } else {
+            print("no token saved in user defaults, logout worked")
+        }
     }
 }
